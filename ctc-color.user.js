@@ -12,14 +12,17 @@
     'use strict';
 
     // https://davidmathlogic.com/colorblind/#%23000000-%23E69F00-%2356B4E9-%23009E73-%23F0E442-%230072B2-%23D55E00-%23CC79A7
-    const wongColors = {
-        red: "#D55E00", // Maybe #BB5505 would be better?
-        orange: "#E69F00",
-        yellow: "#F0E442",
-        green: "#009E73",
-        blue: "#56B4E9",
-        purple: "#CC79A7",
-    };
+    const wongColors = [
+        "rgb(0, 0, 0)",
+        "rgb(207, 207, 207)",
+        "rgb(255, 255, 255)",
+        "#009E73",
+        "#CC79A7",
+        "#E69F00",
+        "#D55E00", // Maybe #BB5505 would be better?
+        "#F0E442",
+        "#56B4E9"
+    ]
 
 
     function overrideColors(newColors) {
@@ -36,26 +39,25 @@
             head.appendChild(styleTag);
         }
 
-        const colors = ["red", "orange", "yellow", "green", "blue", "purple"]
-        const oldColors = {
-            red: "230, 38, 31",
-            orange: "235, 117, 50",
-            yellow: "247, 208, 56",
-            green: "163, 224, 72",
-            blue: "52, 187, 230",
-            purple: "210, 59, 231",
-
-        }
-
-        function cssLine(oldColor, newColor, transparent) {
-            return "[style*='background-color: rgb" + (transparent ? "a" : "") + "(" + oldColor + (transparent ? ", 0.5" : "") + ")'] { background-color: " + newColor + " !important; }";
-        }
+        const oldColors = [
+            "0, 0, 0",
+            "207, 207, 207",
+            "255, 255, 255",
+            "163, 224, 72",
+            "210, 59, 231",
+            "235, 117, 50",
+            "230, 38, 31",
+            "247, 208, 56",
+            "52, 187, 230"
+        ]
 
         let css = ""
         let ndx = 0;
         while (ndx < colors.length) {
-            css += ("[style*='background-color: rgba(" + oldColors[colors[ndx]] + ", 0.5)'] { background-color: " + newColors[colors[ndx]] + " !important; }");
-            css += ("[style*='background-color: rgb(" + oldColors[colors[ndx]] + ")'] { background-color: " + newColors[colors[ndx]] + " !important; }");
+            let oldColor = oldColors[ndx],
+                newColor = newColors[ndx];
+            css += ("[style*='background-color: rgba(" + oldColor + ", 0.5)'] { background-color: " + newColor + " !important; }");
+            css += ("[style*='background-color: rgb(" + oldColor + ")'] { background-color: " + newColor + " !important; }");
             ndx += 1;
         }
 
