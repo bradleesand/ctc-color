@@ -8,4 +8,4 @@
 For more info, check out the [Tampermonkey FAQ](https://www.tampermonkey.net/faq.php#:~:text=Go%20to%20TMs%20options%20page,file%20with%20the%20file%20extensions%20.)
 
 ## Note
-I'm just a fan of Cracking the Crypt who noticed comments about the poor color accessibility of the web app so I figured I'd take a crack at helping to fill a need. I have little-to-no experience designing for accsibiliity and I'm totally open to requests/input/suggestions.
+I'm just a fan of Cracking the Crypt who noticed comments about the poor color accessibility of the web app so I figured I'd take a crack at helping to fill a need. I have little-to-no experience designing for accsibiliity; I just grabbed the "Wong" palatte from [this webpage](https://davidmathlogic.com/colorblind/#%23000000-%23E69F00-%2356B4E9-%23009E73-%23F0E442-%230072B2-%23D55E00-%23CC79A7). I'm totally open to requests/input/suggestions.
