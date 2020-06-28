@@ -28,7 +28,6 @@
     function overrideColors(newColors) {
         const styleId = 'cb-colors'
         let styleTag = document.getElementById(styleId)
-        console.debug(styleTag)
         if (!styleTag) {
             styleTag = document.createElement('style')
             styleTag.id = styleId;
