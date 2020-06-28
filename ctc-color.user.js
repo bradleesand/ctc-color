@@ -53,7 +53,7 @@
 
         let css = ""
         let ndx = 0;
-        while (ndx < colors.length) {
+        while (ndx < oldColors.length) {
             let oldColor = oldColors[ndx],
                 newColor = newColors[ndx];
             css += ("[style*='background-color: rgba(" + oldColor + ", 0.5)'] { background-color: " + newColor + " !important; }");
